@@ -104,3 +104,22 @@ As shown in the confusion matrix above, prediction for gymnastics athlete is qui
 
 The diagonal values is the true positive(correct predictions)
 ![image](https://user-images.githubusercontent.com/55817845/209849194-7b8c8742-4820-4a78-a642-25a0205c741b.png)
+
+              precision    recall  f1-score   support
+
+   Gymnastic       0.60      0.31      0.41      1316
+    Swimming       0.90      0.98      0.93      5500
+    Football       0.88      0.90      0.89      5631
+
+    accuracy                           0.87     12447
+   macro avg       0.79      0.73      0.74     12447
+weighted avg       0.86      0.87      0.86     12447
+
+From the classification report we conclude from the model that there are 12447 rows of the total testing data.
+
+* Gymnastic support 1316 rows
+* Swimming support 5500 rows
+* Football support 5631 rows
+* Precision is the ratio between the True Positives and all the Positives.
+* The recall is the measure of our model correctly identifying True Positives
+* F1 score conveys the balance between the precision and the recall. The closer it to 1 the better the prediction, the worse would be closer to 0.
