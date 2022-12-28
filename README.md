@@ -69,3 +69,38 @@ Why dont we analyze how many times these gold medalist countries participate in 
 ![image](https://user-images.githubusercontent.com/55817845/209844465-a823124d-a8f7-4c53-bed4-bf6059cd7d72.png)
 
 There are 23 city already organized the summer Olympic which London (United Kingdom) and Athen (Greece) 3 times each. Most of the sport held during the year Olympic was held in the London are Football and Basketball including men and women.
+
+#### Analysis 3 - Does the increment of the age of the athletes increase the participation of the athletes? (Inferential)
+![image](https://user-images.githubusercontent.com/55817845/209845142-421b977d-b6b2-4afd-9d92-64af8f753090.png)
+
+The age distribution of the athletes were mostly between 20 - 40 years old. To analyze if there is relationship if the age requirement have an impact to the number of participant, we plot the box plot to see the range and the outliers of the athlete.
+
+![image](https://user-images.githubusercontent.com/55817845/209845409-9aa31c28-0e80-4ce9-8015-2bf333249100.png)
+
+Even though there are outliers at age more than 40s is still does not make the hyphothesis accurate which the age limit increase the number participations. Since there are no age limit in the olympics except the football team must be below 23 gymnastics must be above 16, it could not contribute to the partication instead we belive it contribute to the medal tally of the countries.
+
+#### Analysis 4 - Which country has organized an Olympic event more than once? (Exploratory)
+![image](https://user-images.githubusercontent.com/55817845/209847212-45ff2ca6-f0aa-43a0-a40d-416277805883.png)
+
+Both cities London and Athens has already organized Summer Olympic 3 times in 2004 1906 1896(Athens) and 2012 1948 1908(London) respectively. Stockholm and Paris orgranized twiced where as Sankt Moritz, Innbruck and Lake Placid already orgranized Winter Olympics twice .Tokyo will organize next Summer Olympic in 2021 after it postponed on 2020 because of pandemic Covid-19.
+
+#### Analysis 5 - Given the features of physicality of the athletes, is it possible to predict which sport that they belong to? (Predictive)
+For modelling, we will take 'Sex','Age','Height','Weight','Sport' as our columns. The target will be 'Sports' and the rest will the features for prediction. We will use RandomForest Classifier for modelling.
+It's a standard to split  the data into 70% of training and 30% of testing before inserting into the machine learning model.Moreover, it is also common to split the available data into two sets: a training set and a test set. The training set is used to train the model, while the test set is used to evaluate the performance of the model. Splitting the data in this way helps to prevent overfitting, which is when a model performs well on the training data but poorly on new, unseen data.
+
+![image](https://user-images.githubusercontent.com/55817845/209848947-414f3941-832b-447b-93ec-fb90fbdb8f21.png)
+
+The predicition is low. This could be explained since the target of the prediction is too many which is __56 targets__. The accuracy of the model can be increase if the traget is small.
+
+Rather than taking all the type of sports, we limit the target into most popular sport watched during __Olympic which are Football, Swimming and Gymnastics__.
+
+![image](https://user-images.githubusercontent.com/55817845/209849089-76cd9d12-600c-459e-b356-32c5733d5001.png)
+
+The accuracy of the prediction increasing as the target is getting smaller. __87% accuracy__ for the model is quite good. This shows that indeed the target for previous model is to large as most of the athlete has optimum physicality to fit to almost type of sports.
+
+![image](https://user-images.githubusercontent.com/55817845/209849166-f66ecc7c-1c0d-4455-a1c5-10686f1fd584.png)
+
+As shown in the confusion matrix above, prediction for gymnastics athlete is quite low(30.8%) as true positive and most of the false positive fall into the football predictions. The prediction for Swimming athlete is very high (97.8) which is significant and almost 100%. The prediction for** Football** athlete is also high (89.8%)
+
+The diagonal values is the true positive(correct predictions)
+![image](https://user-images.githubusercontent.com/55817845/209849194-7b8c8742-4820-4a78-a642-25a0205c741b.png)
